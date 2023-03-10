@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bytebank-heredados.iml" filepath="$PROJECT_DIR$/bytebank-heredados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java-introduccion-objetos/java-introduccion-objetos.iml" filepath="$PROJECT_DIR$/../java-introduccion-objetos/java-introduccion-objetos.iml" />
+    </modules>
+  </component>
+</project>
