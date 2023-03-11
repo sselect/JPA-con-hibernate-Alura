@@ -2,6 +2,7 @@ public class Contador extends Funcionario {
 
     @Override
     public double getBonificacion() {
-        return 200;
+             System.out.println("Ejecutando desde..");
+             return 200;
     }
 }

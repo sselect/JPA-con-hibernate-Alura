@@ -4,4 +4,9 @@ public class CuentaAhorros extends Cuenta{
         super(agencia, numero);
     }
 
+    @Override
+    public void deposita(double valor) {
+        this.saldo = this.saldo + valor;
+    }
+
 }
