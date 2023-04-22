@@ -1,0 +1,57 @@
+
+
+.titulo-principal {
+padding-left: 30px;
+}
+
+#barber {
+width: 100%;
+}
+
+.principal {
+background: rgb(144, 156, 150);
+padding: 20px;
+}
+
+.titulo-centralizado {
+text-align: center;
+}
+
+p {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
+}
+
+em strong {
+color: rgb(255, 30, 0);
+}
+
+#mision {
+font-size: 20px;
+}
+
+h3 {
+font-size: 30px;
+text-align: center;
+}
+
+.items {
+font-style: italic;
+}
+
+.diferenciales {
+background: rgb(255, 255, 255);
+padding: 30px;
+
+}
+
+ul {
+display: inline-block;
+vertical-align: top;
+width: 20%;
+margin-right: 15%;
+}
+
+.imagenDiferenciales {
+width: 50%;
+}

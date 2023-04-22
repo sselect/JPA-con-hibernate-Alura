@@ -10,8 +10,8 @@ public final class CuentaCorriente extends Cuenta{
     }
 
     @Override
-    public boolean saca(double valor) {
-        double comision = 0.2;
-        return super.saca(valor + comision);
+    public void saca(double valor) throws SaldoInsuficienteException {
+        double valorSacar = valor + 0.2;
+        super.saca (valorSacar);
     }
 }

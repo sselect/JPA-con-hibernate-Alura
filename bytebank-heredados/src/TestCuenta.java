@@ -1,13 +1,16 @@
 public class TestCuenta {
 
-    public static void main(String[] args) {
-        CuentaCorriente cc = new CuentaCorriente(1,1);
-        CuentaAhorros ca = new CuentaAhorros(2,3);
-        cc.deposita(2000);
-        cc.transfiere(1000, ca);
+    public static void main(String[] args) throws SaldoInsuficienteException {
+        CuentaCorriente cc = new CuentaCorriente(111,111);
+        cc.deposita(100);
+        CuentaAhorros ca = new CuentaAhorros(222, 222);
+        ca.deposita(200);
 
-        System.out.println(cc.getSaldo());
-        System.out.println(ca.getSaldo());
+        cc.transfiere(100, ca);
+
+
+        System.out.println("CC: " + cc.getSaldo());
+        System.out.println("CA: " + ca.getSaldo());
 
     }
 }
