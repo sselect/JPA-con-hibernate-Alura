@@ -1,8 +1,8 @@
 package com.alura.jdbc;
 
-import javax.swing.JFrame;
-
 import com.alura.jdbc.view.ControlDeStockFrame;
+
+import javax.swing.*;
 
 public class ControlDeStockMain {
 
@@ -10,5 +10,4 @@ public class ControlDeStockMain {
 		ControlDeStockFrame productoCategoriaFrame = new ControlDeStockFrame();
 		productoCategoriaFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
 }

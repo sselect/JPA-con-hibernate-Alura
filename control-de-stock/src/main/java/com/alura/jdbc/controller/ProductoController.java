@@ -1,51 +1,43 @@
 package com.alura.jdbc.controller;
 
+import com.alura.jdbc.dao.ProductoDAO;
 import com.alura.jdbc.factory.ConnectionFactory;
+import com.alura.jdbc.modelo.Categoria;
+import com.alura.jdbc.modelo.Producto;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ProductoController {
 
-	public void modificar(String nombre, String descripcion, Integer id) {
-		// TODO
+	private ProductoDAO productoDao;
+
+	public ProductoController() {
+		var factory = new ConnectionFactory();
+		this.productoDao = new ProductoDAO(factory.recuperaConexion());
 	}
 
-	public void eliminar(Integer id) {
-		// TODO
+	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) {
+		return productoDao.modificar(nombre, descripcion, cantidad, id);
 	}
 
-	public List<Map<String, String>> listar() throws SQLException {
-		Connection con = new ConnectionFactory().recuperaConexion();
-		Statement statement = con.createStatement();
-
-		statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
-
-		ResultSet resultSet = statement.getResultSet();
-
-		List<Map<String, String>> resultado = new ArrayList<>();
-
-		while(resultSet.next()){
-			Map <String, String> fila = new HashMap<>();
-			fila.put("ID", String.valueOf(resultSet.getInt("ID")));
-			fila.put("NOMBRE", resultSet.getString("NOMBRE"));
-			fila.put("DESCRIPCION", resultSet.getString("DESCRIPCION"));
-			fila.put("CANTIDAD", String.valueOf(resultSet.getInt("CANTIDAD")));
-
-			resultado.add(fila);
-
-		}
-
-		con.close();
-
-		return resultado;
+	public int eliminar(Integer id) {
+		return productoDao.eliminar(id);
 	}
 
-    public void guardar(Object producto) {
-		// TODO
+	public List<Producto> listar() {
+		return productoDao.listar();
 	}
 
+	public void guardar(Producto producto) {
+		productoDao.guardar(producto);
+	}
+
+	public List<Producto> listar (Categoria categoria){
+		return productoDao.listar(categoria.getId ());
+	}
+
+    public void guardar(Producto producto, Integer categoriaId) {
+		producto.setCategoriaId(categoriaId);
+		productoDao.guardar (producto);
+    }
 }

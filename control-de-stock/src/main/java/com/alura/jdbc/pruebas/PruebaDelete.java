@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class PuebaDelete {
+public class PruebaDelete {
     public static void main(String[] args) throws SQLException {
         Connection con = new ConnectionFactory().recuperaConexion();
 
