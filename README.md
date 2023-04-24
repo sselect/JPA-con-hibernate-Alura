@@ -1,5 +1,6 @@
 # Java-Backend - ONE NEXT ALURA ORACLE ♨️
-
+![Badge Creador](https://img.shields.io/badge/Created%20BY-Ely%20Hernandez-blue) 
+![Badge thanksto](https://img.shields.io/badge/Thanks-AluraLatam-red)
 ## Curso de Oracle - Alura (Java)
 
 >  Clases: 
